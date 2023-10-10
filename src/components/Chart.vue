@@ -10,6 +10,9 @@
       >
         <DxPoint :visible="false" />
       </DxCommonSeriesSettings>
+      <DxValueAxis>
+        <DxGrid :visible="false" />
+      </DxValueAxis>
       <DxArgumentAxis>
         <DxLabel :customize-text="customizeText" />
       </DxArgumentAxis>
@@ -28,8 +31,10 @@ import {
   DxArgumentAxis,
   DxLabel,
   DxPoint,
+  DxGrid,
   DxLegend,
   DxTooltip,
+  DxValueAxis,
 } from "devextreme-vue/chart";
 
 const header = "Download per week";
