@@ -6,7 +6,7 @@
       <DxCommonSeriesSettings
         argument-field="date"
         value-field="count"
-        type="line"
+        type="spline"
       >
         <DxPoint :visible="false" />
       </DxCommonSeriesSettings>
@@ -14,7 +14,7 @@
         <DxGrid :visible="false" />
       </DxValueAxis>
       <DxArgumentAxis>
-        <DxLabel :customize-text="customizeText" />
+        <DxLabel :visible="false" :customize-text="customizeText" />
       </DxArgumentAxis>
       <DxSeries color="#4176fa" />
       <DxLegend :visible="false" />
@@ -37,7 +37,7 @@ import {
   DxValueAxis,
 } from "devextreme-vue/chart";
 
-const header = "Download per week";
+const header = "Download per month";
 let chartData = ref([
   {
     date: "2023-10-02T21:50:00Z",

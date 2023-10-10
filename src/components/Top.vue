@@ -78,5 +78,6 @@ const customizeText = (value) => {
 }
 .value {
   margin: 0;
+  color: #ee8d85;
 }
 </style>
