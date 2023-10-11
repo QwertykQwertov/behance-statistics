@@ -50,7 +50,7 @@ const customizeText = (value) => {
   width: 25%;
 }
 .download-list {
-  font-size: 38px;
+  font-size: 36px;
 }
 .download-title {
   margin: 10px 0;

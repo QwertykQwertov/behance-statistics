@@ -34,7 +34,7 @@ const count = ref(0);
 <style lang="scss" scoped>
 .footer-wrapper {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .links {
   display: flex;
@@ -43,7 +43,7 @@ const count = ref(0);
   gap: 20px;
 }
 .footer-text {
-  font-size: 38px;
+  font-size: 36px;
   margin: 0;
 }
 .footer-link {

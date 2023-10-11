@@ -35,7 +35,7 @@ const customizeText = (value) => {
 }
 
 .top-list {
-  font-size: 38px;
+  font-size: 34px;
   margin: 0;
   padding: 0;
   // list-style: circle;
