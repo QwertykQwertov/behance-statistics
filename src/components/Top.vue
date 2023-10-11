@@ -43,6 +43,7 @@ const customizeText = (value) => {
 
 .top-list-item {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   margin: 10px 0;
   align-items: center;

@@ -3,19 +3,16 @@
     <h2>Downloads</h2>
     <div class="download-list">
       <div class="download-list-item">
-        <p class="download-title">
-          Total: <span class="total-value">{{ customizeText(total) }}</span>
-        </p>
+        <p class="download-title">Total:</p>
+        <span class="total-value">{{ customizeText(total) }}</span>
       </div>
       <div class="download-list-item">
-        <p class="download-title">
-          Weekly: <span class="weekly-value">{{ customizeText(weekly) }}</span>
-        </p>
+        <p class="download-title">Weekly:</p>
+        <span class="weekly-value">{{ customizeText(weekly) }}</span>
       </div>
       <div class="download-list-item">
-        <p class="download-title">
-          Today: <span class="daily-value">{{ customizeText(daily) }}</span>
-        </p>
+        <p class="download-title">Today:</p>
+        <span class="daily-value">{{ customizeText(daily) }}</span>
       </div>
     </div>
   </div>
@@ -48,9 +45,17 @@ const customizeText = (value) => {
 <style scoped>
 .download-wrapper {
   width: 25%;
+
 }
 .download-list {
+  margin: 0 auto;
+  max-width: 65%;
   font-size: 36px;
+}
+.download-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .download-title {
   margin: 10px 0;
