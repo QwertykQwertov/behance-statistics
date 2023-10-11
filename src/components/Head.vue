@@ -9,7 +9,7 @@
   width: 100%;
   display: flex;
   &>img {
-    margin: 100px auto;
+    margin: 50px auto 100px;
   }
 }
 </style>

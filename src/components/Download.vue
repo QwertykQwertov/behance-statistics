@@ -21,14 +21,24 @@
   </div>
 </template>
 <script setup>
-const total = 72674;
-const weekly = 12733;
-const daily = 674;
+import { ref, onMounted } from "vue";
+let total = ref();
+let weekly = ref();
+let daily = ref();
 
+onMounted(() => {
+  fetch("https://710ede90.artydev.ru/api/v1/total/")
+    .then((res) => res.json())
+    .then(({ data }) => {
+      total.value = data.total;
+      weekly.value = data.weekly;
+      daily.value = data.daily;
+    });
+});
 const customizeText = (value) => {
   let formatValue = value;
   if (value >= 1000) {
-    formatValue = (value / 1000).toFixed(1) + ' K';
+    formatValue = (value / 1000).toFixed(2) + " K";
   }
   return formatValue;
 };
@@ -40,9 +50,9 @@ const customizeText = (value) => {
   width: 25%;
 }
 .download-list {
-  font-size: 30px;
+  font-size: 38px;
 }
-.download-title{
+.download-title {
   margin: 10px 0;
 }
 .total-value {
