@@ -18,12 +18,16 @@
       </DxArgumentAxis>
       <DxSeries color="#4176fa" />
       <DxLegend :visible="false" />
-      <DxTooltip :enabled="true" />
+      <DxTooltip :enabled="true" content-template="tooltipTemplate" />
+      <template #tooltipTemplate="{ data }">
+      <ToolTipTemplate :info="data"/>
+    </template>
     </DxChart>
   </div>
 </template>
 <script setup>
 import { computed } from "vue";
+import ToolTipTemplate from "./TooltipTemplate.vue";
 import DataSource from "devextreme/data/data_source";
 import {
   DxChart,
@@ -40,11 +44,20 @@ import {
 
 const header = "Download per month";
 const chartData = new DataSource({
-  key: 'report_dt',
+  key: "report_dt",
   load() {
-    return fetch('https://710ede90.artydev.ru/api/v1/daily_stats/').then(res => res.json()).then(data => data.data)
-  }
-})
+    return fetch("https://710ede90.artydev.ru/api/v1/daily_stats/")
+      .then((res) => res.json())
+      .then((data) => data.data);
+  },
+});
+const customizeTooltip = (arg) => {
+  return {
+    text: `Date: ${arg.argument} 
+ 
+ Downloads: ${arg.value}`,
+  };
+};
 </script>
 
 <style lang="scss" scoped>
