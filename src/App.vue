@@ -1,13 +1,14 @@
 <script setup>
 import Head from './components/Head.vue'
 import Content from './components/Content.vue'
-// import HelloWorld from './components/HelloWorld.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <Head />
   <Content />
+  <Footer />
 
 </template>
 

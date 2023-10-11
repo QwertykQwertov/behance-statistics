@@ -22,6 +22,7 @@ const count = ref(0);
 <style scoped>
   .flex-container{
     width: 95%;
+    margin: 0 auto;    
     display: flex;
     justify-content: space-around;
   }

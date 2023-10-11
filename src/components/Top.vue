@@ -12,37 +12,18 @@
   </div>
 </template>
 <script setup>
-let authors = [
-  {
-    author: "Đốm Đốm",
-    author_url: "https://www.behance.net/ddooms",
-    downloads: 9598,
-  },
-  {
-    author: "Liz Tulentsova",
-    author_url: "https://www.behance.net/lizt",
-    downloads: 8333,
-  },
-  {
-    author: "Marcela Soares",
-    author_url: "https://www.behance.net/mrclssoares",
-    downloads: 3398,
-  },
-  {
-    author: "Elena Nalabordina",
-    author_url: "https://www.behance.net/svoyalena",
-    downloads: 789,
-  },
-  {
-    author: "Anastasia Bikmulina",
-    author_url: "https://www.behance.net/anquari",
-    downloads: 674,
-  },
-];
+import { ref, onMounted } from "vue";
+
+let authors = ref([]);
+onMounted(() => {
+  fetch("https://710ede90.artydev.ru/api/v1/top_authors/")
+    .then((res) => res.json())
+    .then(({ data }) => authors.value = data);
+});
 const customizeText = (value) => {
   let formatValue = value;
   if (value >= 1000) {
-    formatValue = (value / 1000).toFixed(1) + " K";
+    formatValue = (value / 1000).toFixed(2) + " K";
   }
   return formatValue;
 };
@@ -54,7 +35,7 @@ const customizeText = (value) => {
 }
 
 .top-list {
-  font-size: 30px;
+  font-size: 34px;
   margin: 0;
   padding: 0;
   // list-style: circle;
@@ -78,5 +59,6 @@ const customizeText = (value) => {
 }
 .value {
   margin: 0;
+  color: #ee8d85;
 }
 </style>
