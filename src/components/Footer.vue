@@ -43,12 +43,21 @@ const count = ref(0);
   gap: 20px;
 }
 .footer-text {
-  font-size: 36px;
   margin: 0;
 }
 .footer-link {
   &:hover > img {
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 430px) {
+  .links {
+    flex-wrap: wrap;
+  }
+  .footer-text {
+    width: 95%;
+    text-align: center;
   }
 }
 </style>

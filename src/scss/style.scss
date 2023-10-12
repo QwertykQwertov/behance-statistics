@@ -1,0 +1,19 @@
+// Abstract
+@import "./abstract/constants";
+@import "./abstract/mixins";
+@import "./abstract/placeholders";
+
+// Base
+@import "./base/base";
+
+
+
+@include media-mobile-large {
+  h2 {
+    font-size: 30px;
+    /* text-align: center; */
+  }
+  p, a, span {
+    font-size: 26px;
+  }
+}

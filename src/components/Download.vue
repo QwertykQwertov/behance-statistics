@@ -42,19 +42,17 @@ const customizeText = (value) => {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .download-wrapper {
-  width: 25%;
-
+  max-width: 280px;
+  width: 95%;
 }
 .download-list {
-  margin: 0 auto;
-  max-width: 65%;
-  font-size: 36px;
+  // max-width: 65%;
 }
 .download-list-item {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
   align-items: center;
 }
 .download-title {
@@ -68,5 +66,20 @@ const customizeText = (value) => {
 }
 .daily-value {
   color: #4176fa;
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    text-align: center;
+  }
+  .download-list {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .download-list-item {
+    justify-content: space-between;
+  }
+  
 }
 </style>

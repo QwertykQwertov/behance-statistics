@@ -25,5 +25,6 @@ const count = ref(0);
     margin: 0 auto;    
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 </style>

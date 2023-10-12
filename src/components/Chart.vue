@@ -2,7 +2,7 @@
   <div class="chart-wrapper">
     <h2>{{ header }}</h2>
 
-    <DxChart id="chart" :data-source="chartData" palette="Violet" width="100%">
+    <DxChart id="chart" :data-source="chartData" palette="Violet" width="100%" height="350">
       <DxCommonSeriesSettings
         argument-field="report_dt"
         value-field="cnt"
@@ -20,8 +20,8 @@
       <DxLegend :visible="false" />
       <DxTooltip :enabled="true" content-template="tooltipTemplate" />
       <template #tooltipTemplate="{ data }">
-      <ToolTipTemplate :info="data"/>
-    </template>
+        <ToolTipTemplate :info="data" />
+      </template>
     </DxChart>
   </div>
 </template>
@@ -62,9 +62,18 @@ const customizeTooltip = (arg) => {
 
 <style lang="scss" scoped>
 .chart-wrapper {
+  min-width: 500px;
   width: 40%;
   text-align: center;
 }
+@media (max-width: 1000px) {
+  .chart-wrapper{
+    min-width: 0; 
+    width: 95%;
+
+  }
+}
+
 .read-the-docs {
   color: #888;
 }
