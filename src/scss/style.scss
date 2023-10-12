@@ -7,13 +7,21 @@
 @import "./base/base";
 
 
+@media (max-width: 1000px) {
+  h2 {
+    text-align: center;
+  }
+}
 
 @include media-mobile-large {
   h2 {
     font-size: 30px;
     /* text-align: center; */
   }
-  p, a, span {
+
+  p,
+  a,
+  span {
     font-size: 26px;
   }
 }

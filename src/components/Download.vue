@@ -47,9 +47,6 @@ const customizeText = (value) => {
   max-width: 280px;
   width: 95%;
 }
-.download-list {
-  // max-width: 65%;
-}
 .download-list-item {
   display: flex;
   gap: 10px;
@@ -69,9 +66,6 @@ const customizeText = (value) => {
 }
 
 @media (max-width: 1000px) {
-  h2 {
-    text-align: center;
-  }
   .download-list {
     max-width: 85%;
     margin: 0 auto;

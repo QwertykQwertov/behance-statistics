@@ -34,9 +34,6 @@ const customizeText = (value) => {
   max-width: 350px;
   width: 95%;
 }
-h2 {
-  text-align: center;
-}
 
 .top-list {
   margin: 0;

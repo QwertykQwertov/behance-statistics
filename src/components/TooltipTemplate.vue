@@ -16,9 +16,12 @@ const formatDate = (value) => {
   return new Intl.DateTimeFormat("ru-RU", { date: "short" }).format(date);
 };
 </script>
-<style>
+<style scoped>
 .state-tooltip {
   height: 50px;
+}
+p, span {
+  font-size: 14px;
 }
 span {
   font-weight: bold;
