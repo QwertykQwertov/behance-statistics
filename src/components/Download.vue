@@ -3,19 +3,16 @@
     <h2>Downloads</h2>
     <div class="download-list">
       <div class="download-list-item">
-        <p class="download-title">
-          Total: <span class="total-value">{{ customizeText(total) }}</span>
-        </p>
+        <p class="download-title">Total:</p>
+        <span class="total-value">{{ customizeText(total) }}</span>
       </div>
       <div class="download-list-item">
-        <p class="download-title">
-          Weekly: <span class="weekly-value">{{ customizeText(weekly) }}</span>
-        </p>
+        <p class="download-title">Weekly:</p>
+        <span class="weekly-value">{{ customizeText(weekly) }}</span>
       </div>
       <div class="download-list-item">
-        <p class="download-title">
-          Today: <span class="daily-value">{{ customizeText(daily) }}</span>
-        </p>
+        <p class="download-title">Today:</p>
+        <span class="daily-value">{{ customizeText(daily) }}</span>
       </div>
     </div>
   </div>
@@ -45,12 +42,15 @@ const customizeText = (value) => {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .download-wrapper {
-  width: 25%;
+  max-width: 280px;
+  width: 95%;
 }
-.download-list {
-  font-size: 36px;
+.download-list-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 .download-title {
   margin: 10px 0;
@@ -63,5 +63,17 @@ const customizeText = (value) => {
 }
 .daily-value {
   color: #4176fa;
+}
+
+@media (max-width: 1000px) {
+  .download-list {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .download-list-item {
+    justify-content: space-between;
+  }
+  
 }
 </style>

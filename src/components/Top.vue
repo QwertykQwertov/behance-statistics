@@ -18,7 +18,7 @@ let authors = ref([]);
 onMounted(() => {
   fetch("https://710ede90.artydev.ru/api/v1/top_authors/")
     .then((res) => res.json())
-    .then(({ data }) => authors.value = data);
+    .then(({ data }) => (authors.value = data));
 });
 const customizeText = (value) => {
   let formatValue = value;
@@ -31,18 +31,18 @@ const customizeText = (value) => {
 
 <style lang="scss" scoped>
 .top-wrapper {
-  width: 25%;
+  max-width: 350px;
+  width: 95%;
 }
 
 .top-list {
-  font-size: 34px;
   margin: 0;
   padding: 0;
-  // list-style: circle;
 }
 
 .top-list-item {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   margin: 10px 0;
   align-items: center;

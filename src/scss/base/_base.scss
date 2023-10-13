@@ -1,21 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300&display=swap');
 
-@font-face {
-  font-family: UniSans;
-  src: url("./assets/fonts/UniSans-Trial-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: UniSansLight;
-  src: url("./assets/fonts/UniSans-Trial-Light.otf") format("opentype");
-}
-
 #app {
   width: 100%;
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: $background-color;
   /* font-family: UniSans; */
   font-family: 'Urbanist', sans-serif;
 }
@@ -24,6 +14,6 @@ h2 {
   font-size: 40px;
   /* text-align: center; */
 }
-p, a {
+p, a, span {
   font-size: 36px;
 }

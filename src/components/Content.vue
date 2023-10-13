@@ -1,14 +1,11 @@
 <script setup>
-import { ref } from "vue";
-import Chart from "./Chart.vue";
+import { defineAsyncComponent } from "vue";
+const Chart = defineAsyncComponent(() =>
+  import('./Chart.vue')
+)
+// import Chart from "./Chart.vue";
 import Download from "./Download.vue";
 import Top from "./Top.vue";
-
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
 </script>
 
 <template>
@@ -25,5 +22,6 @@ const count = ref(0);
     margin: 0 auto;    
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 </style>

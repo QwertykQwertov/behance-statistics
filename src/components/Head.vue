@@ -10,6 +10,7 @@
   display: flex;
   &>img {
     margin: 20px auto;
+    max-width: 90%;
   }
 }
 </style>
