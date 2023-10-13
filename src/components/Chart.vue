@@ -26,7 +26,6 @@
   </div>
 </template>
 <script setup>
-import { computed } from "vue";
 import ToolTipTemplate from "./TooltipTemplate.vue";
 import DataSource from "devextreme/data/data_source";
 import {

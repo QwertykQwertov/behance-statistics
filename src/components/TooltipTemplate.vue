@@ -5,12 +5,9 @@
   </div>
 </template>
 <script setup>
-// import { computed } from "vue";
-
 const props = defineProps({
   info: Object,
 });
-console.log(props.info);
 const formatDate = (value) => {
   let date = new Date(value);
   return new Intl.DateTimeFormat("ru-RU", { date: "short" }).format(date);
