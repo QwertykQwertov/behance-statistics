@@ -17,6 +17,9 @@
       <a href="https://t.me/QwertykQwertov" class="footer-link" target="_blank"
         ><img src="../assets/telegram.png" alt="Telegram"
       /></a>
+      <a href="https://pay.cloudtips.ru/p/108a3cf6" class="footer-link" target="_blank"
+        ><img src="../assets/money.png" alt="Telegram"
+      /></a>
     </div>
   </div>
 </template>
@@ -40,6 +43,10 @@
     transform: scale(1.2);
   }
 }
+img {
+    width: 33px;
+    height: 33px;
+  }
 
 @media (max-width: 430px) {
   .links {
