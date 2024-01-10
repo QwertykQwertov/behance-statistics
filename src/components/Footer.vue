@@ -6,19 +6,19 @@
         href="https://chrome.google.com/webstore/detail/behance-saver/pcgmjcfekkppafhcjbpajfgakmlmnbfn?utm_source=ext_sidebar&hl=ru"
         class="footer-link"
         target="_blank"
-        ><img src="../assets/chrome.png" alt="Chrome"
+        ><img src="@/chrome.png" alt="Chrome"
       /></a>
       <a
         href="https://addons.mozilla.org/ru/firefox/addon/extension-for-behance-images/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
         class="footer-link"
         target="_blank"
-        ><img src="../assets/firefox.png" alt="Firefox"
+        ><img src="@/firefox.png" alt="Firefox"
       /></a>
       <a href="https://t.me/QwertykQwertov" class="footer-link" target="_blank"
-        ><img src="../assets/telegram.png" alt="Telegram"
+        ><img src="@/telegram.png" alt="Telegram"
       /></a>
       <a href="https://pay.cloudtips.ru/p/108a3cf6" class="footer-link" target="_blank"
-        ><img src="../assets/money.png" alt="Telegram"
+        ><img src="@/money.png" alt="Telegram"
       /></a>
     </div>
   </div>

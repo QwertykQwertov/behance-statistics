@@ -1,6 +1,6 @@
 <template>
   <div class="logo-wrapper">
-    <img src="../assets/logo.png" alt="Behance saver" />
+    <img src="@/logo.png" alt="Behance saver" />
   </div>
 </template>
 

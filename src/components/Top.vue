@@ -51,6 +51,7 @@ const customizeText = (value) => {
 .author-link {
   color: #4176fa;
   transition: 0.3s all;
+  max-width: 74%;
 
   &:hover {
     color: #ee8d85;
